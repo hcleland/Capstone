@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# response = Unirest.get("https://api.sportradar.us/mlb/trial/v6.5/en/league/venues.json?api_key=utemdppnw4bc5zzym2gb4fpm")
+# response = Unirest.get("https://api.sportradar.us/mlb/trial/v6.5/en/league/venues.json?api_key=API KEY GOES HERE")
 
 # stadium_list = response.body
 
@@ -43,7 +43,7 @@
 #     stadium.save
 # end
 
-response = Unirest.get("https://api.sportradar.us/mlb/trial/v6.5/en/games/2018/08/05/schedule.json?api_key=utemdppnw4bc5zzym2gb4fpm")
+response = Unirest.get("https://api.sportradar.us/mlb/trial/v6.5/en/games/2018/08/05/schedule.json?api_key=API KEY GOES HERE")
 
 schedule_list = response.body['games']
 

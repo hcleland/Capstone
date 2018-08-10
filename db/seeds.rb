@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# response = Unirest.get("https://api.sportradar.us/mlb/trial/v6.5/en/league/venues.json?api_key=utemdppnw4bc5zzym2gb4fpm")
+# response = Unirest.get("https://api.sportradar.us/mlb/trial/v6.5/en/league/venues.json?api_key=API KEY GOES HERE")
 
 # stadium_list = response.body
 
@@ -43,7 +43,9 @@
 #     stadium.save
 # end
 
+
 # response = Unirest.get("https://api.sportradar.us/mlb/trial/v6.5/en/games/2018/09/30/schedule.json?api_key=utemdppnw4bc5zzym2gb4fpm")
+# response = Unirest.get("https://api.sportradar.us/mlb/trial/v6.5/en/games/2018/08/05/schedule.json?api_key=API KEY GOES HERE")aaba2cb312e99f65dbd1bf3708c1005a619a98c8
 
 # schedule_list = response.body['games']
 
@@ -96,26 +98,26 @@
 # schedule['games'][0]['venue']['zip']
 
 
-user = User.new(
-      name: "Peter",
-      email: "cleland@gmail.com",
-      password_digest: "password"
-      )
-user.save
+# user = User.new(
+#       name: "Peter",
+#       email: "cleland@gmail.com",
+#       password_digest: "password"
+#       )
+# user.save
 
-user = User.new(
-      name: "Isaac",
-      email: "cleland@gmail.com",
-      password_digest: "password"
-      )
-user.save
+# user = User.new(
+#       name: "Isaac",
+#       email: "cleland@gmail.com",
+#       password_digest: "password"
+#       )
+# user.save
 
-rating = Rating.new(
-  stadium: 1,
-  atmosphere: 2,
-  concessions: 3,
-  extras: 4,
-  fans: 5, 
-  notes: "I had a great time.  Can't wait to come back."
-  )
-rating.save
+# rating = Rating.new(
+#   stadium: 1,
+#   atmosphere: 2,
+#   concessions: 3,
+#   extras: 4,
+#   fans: 5, 
+#   notes: "I had a great time.  Can't wait to come back."
+#   )
+# rating.save

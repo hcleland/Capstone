@@ -43,43 +43,43 @@
 #     stadium.save
 # end
 
-response = Unirest.get("https://api.sportradar.us/mlb/trial/v6.5/en/games/2018/08/05/schedule.json?api_key=utemdppnw4bc5zzym2gb4fpm")
+# response = Unirest.get("https://api.sportradar.us/mlb/trial/v6.5/en/games/2018/09/30/schedule.json?api_key=utemdppnw4bc5zzym2gb4fpm")
 
-schedule_list = response.body['games']
+# schedule_list = response.body['games']
 
 # puts JSON.pretty_generate(schedule['games'][0])
 
-  index = 0
-  number = 1
-  schedule_list.each do |schedule|
-    schedule_list[index]['game_number']
-    schedule_list[index]['scheduled']
-    schedule_list[index]['home']['name']
-    schedule_list[index]['away']['name']
-    schedule_list[index]['double_header']
-    schedule_list[index]['venue']['name']
-    schedule_list[index]['venue']['address']
-    schedule_list[index]['venue']['city']
-    schedule_list[index]['venue']['state']
-    schedule_list[index]['venue']['zip']
+#   index = 0
+#   number = 1
+#   schedule_list.each do |schedule|
+#     schedule_list[index]['game_number']
+#     schedule_list[index]['scheduled']
+#     schedule_list[index]['home']['name']
+#     schedule_list[index]['away']['name']
+#     schedule_list[index]['double_header']
+#     schedule_list[index]['venue']['name']
+#     schedule_list[index]['venue']['address']
+#     schedule_list[index]['venue']['city']
+#     schedule_list[index]['venue']['state']
+#     schedule_list[index]['venue']['zip']
 
-    schedule = Schedule.new(
-    game_number: schedule_list[index]['game_number'],
-    scheduled: schedule_list[index]['scheduled'],
-    home_team: schedule_list[index]['home']['name'],
-    away_team: schedule_list[index]['away']['name'],
-    double_header: schedule_list[index]['double_header'],
-    venue_name: schedule_list[index]['venue']['name'],
-    venue_address: schedule_list[index]['venue']['address'],
-    venue_city: schedule_list[index]['venue']['city'],
-    venue_state: schedule_list[index]['venue']['state'],
-    venue_zip: schedule_list[index]['venue']['zip']
-    )
-    schedule.save
+#     schedule = Schedule.new(
+#     game_number: schedule_list[index]['game_number'],
+#     scheduled: schedule_list[index]['scheduled'],
+#     home_team: schedule_list[index]['home']['name'],
+#     away_team: schedule_list[index]['away']['name'],
+#     double_header: schedule_list[index]['double_header'],
+#     venue_name: schedule_list[index]['venue']['name'],
+#     venue_address: schedule_list[index]['venue']['address'],
+#     venue_city: schedule_list[index]['venue']['city'],
+#     venue_state: schedule_list[index]['venue']['state'],
+#     venue_zip: schedule_list[index]['venue']['zip']
+#     )
+#     schedule.save
 
-    index += 1
-    number += 1
-end
+#     index += 1
+#     number += 1
+# end
 
 
 
@@ -96,10 +96,26 @@ end
 # schedule['games'][0]['venue']['zip']
 
 
+user = User.new(
+      name: "Peter",
+      email: "cleland@gmail.com",
+      password_digest: "password"
+      )
+user.save
 
+user = User.new(
+      name: "Isaac",
+      email: "cleland@gmail.com",
+      password_digest: "password"
+      )
+user.save
 
-
-
-
-
-
+rating = Rating.new(
+  stadium: 1,
+  atmosphere: 2,
+  concessions: 3,
+  extras: 4,
+  fans: 5, 
+  notes: "I had a great time.  Can't wait to come back."
+  )
+rating.save

@@ -1,3 +1,4 @@
 class Stadium < ApplicationRecord
-  has_many :trips
+  belongs_to :user
+  has_many :ratings
 end

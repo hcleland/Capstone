@@ -5,6 +5,10 @@ Rails.application.routes.draw do
     get "/stadiums" => "stadiums#index"
     get "/stadiums/:id" => "stadiums#show"
 
-    get "/schedules" => "schedules#index"
+    post "/users" => "users#create"
+
+    post "/sessions" => "sessions#create"
+
+    post "/ratings" => "ratings#create"
   end
 end
